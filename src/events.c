@@ -219,8 +219,8 @@ static void feh_event_handle_ButtonPress(XEvent * ev)
 
 	} else if (feh_is_bb(EVENT_pan, button, state)) {
 		D(("Next button, but could be pan mode\n"));
-		opt.mode = MODE_NEXT;
-		winwid->mode = MODE_NEXT;
+		opt.mode = opt.pan_only ? MODE_PAN : MODE_NEXT;
+		winwid->mode = opt.pan_only ? MODE_PAN : MODE_NEXT;
 		D(("click offset is %d,%d\n", ev->xbutton.x, ev->xbutton.y));
 		winwid->click_offset_x = ev->xbutton.x - winwid->im_x;
 		winwid->click_offset_y = ev->xbutton.y - winwid->im_y;

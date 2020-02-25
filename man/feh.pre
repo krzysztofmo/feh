@@ -642,6 +642,10 @@ when using
 or the save_image command.
 By default, files are saved in the current working directory.
 .
+.It Cm --pan-only
+.
+Disables advancing to next image on mouse button click.
+.
 .It Cm -p , --preload
 .
 Preload images.
